@@ -1,24 +1,15 @@
-# README
+# Turning Green Core
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo contains the backend for various Turning Green stuff.
 
-Things you may want to cover:
+## Initial Setup
+For first-time users, do the following
+```
+1. Get Docker
+2. `docker-compose run web rails db:create`
+3. `docker-compose up`
+```
+## Deployment
 
-* Ruby version
+Run `docker-compose up`.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

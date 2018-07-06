@@ -6,9 +6,11 @@ This repo contains the backend for various Turning Green stuff.
 For first-time users, do the following
 ```
 1. Get Docker
-2. `docker-compose run web rails db:create`
-3. `docker-compose run web rails db:migrate`
-4. `docker-compose up`
+2. `docker-compose build`
+3. `docker-compose run web rails db:create`
+4. `docker-compose run web rails db:migrate`
+5. `docker-compose run web rake db:importjson`
+6. `docker-compose up`
 ```
 ## Deployment
 

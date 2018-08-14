@@ -1,399 +1,175 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <title>TurningGreen</title>
-    <style>
-      html,body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        background-color: #111;
-        color: #fff;
-        font-family: Arial, sans-serif;
-      }
-      h1, h3 {
-        font-size: 4vw;
-        text-transform: uppercase;
-      }
-      h3 {
-        text-align: center;
-      }
+<script>
+ var slideIndex = 1;
+ var panels = document.getElementsByClassName("panel");
+ var dots   = document.getElementsByClassName("dot");
+ showSlides(slideIndex);
 
-      p {
-        font-size: 21px;
-      }
-      .fullScreen {
-        width: 100%;
-        min-height: 50vh;
-        /* background-color: #ccc; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .screenWrapper {
-        width: 80%;
-        background-color: none;
-      }
+ function navigate(n) {
+   showSlides(slideIndex += n);
+ }
 
-      .navbarList {
-        font-size: 25px;
-        line-height: 1em;
-        margin: 15px 40px;
-        text-transform: uppercase;
-        text-align: center;
-        position: fixed;
-        right: 0;
-        left: 0;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        padding: 0;
-        background-color: lightgreen;
-        background-color: rgba(144,238,144,.9);
-        z-index: 100;
-      }
-      .navbarList li {
-        display: inline-block;
-        list-style: outside none none;
-        position: relative;
-        margin: 0.5em 0.6em;
-        padding: 12px 15px;
-      }
-      .navbarList li a {
-        color: #fff;
-        text-decoration: none;
-      }
-      .actionButton {
-        text-transform: uppercase;
-        font-size: 25px;
-        text-decoration: none;
-        color: white;
-        padding: 10px 15px;
-        background-color: #fa8072;
-        width: auto;
-      }
-      .actionButton:hover {
-        background-color: #cc685d;
-        text-decoration: underline;
-      }
-      .footerScreen {
-        height: 20vh;
-      }
-      /* carousel stuff */
-      .carouselDiv {
-        width: 100%;
-        position: relative;
-        margin: auto;
-      }
-      .panel {
-        display: none;
-        height: 100%;
-      }
-      .panelImg {
-        width: 40%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      .panelImg img {
-        width: 80%;
-        vertical-align: middle;
-      }
-      .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        margin-top: -22px;
-        padding: 16px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-      }
-      .next {
-        right: -8%;
-        border-radius: 3px 0 0 3px;
-      }
-      .prev {
-        left: -8%;
-      }
-      .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-      }
+ function currentSlide(n) {
+   showSlides(slideIndex = n);
+ }
 
-      .panelText {
-        color: white;
-        width: 60%;
-        height: 100%;
-        padding-left: 15px;
-        margin-left: auto;
-        margin-right: auto;
-        flex: 1;
-      }
-      .panelText h3 {
-        text-align: left;
-      }
-      .carouselDots {
-        text-align: center;
-      }
-      .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
-      .active, .dot:hover {
-        background-color: #717171;
-      }
-      .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
-      }
-      @-webkit-keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-      }
-      @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-      }
-      /* that's all folks */
-      .pageAnchor {
-        display: block;
-        height: 25vh;
-        margin-top: -25vh;
-        visibility: hidden;
-      }
-      #signUpButton {
-        text-align: center;
-      }
-      #welcomeScreen {
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("group.jpeg");
-        /* background-image: url("group.jpeg"); */
-        background-repeat: no-repeat;
-        background-position: center;
+ function showSlides(n) {
+   if (n > panels.length) {slideIndex = 1}
+   if (n < 1)             {slideIndex = panels.length}
 
-      }
-      #aboutScreen {
-        background-color: white;
-        color: black;
-      }
-      #aboutContent {
-        display: flex;
-      }
-      #aboutImageCont {
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      #aboutImage {
-        width: 80%;
-      }
-      #aboutTextCont {
-        width: 60%;
-        height: 100%;
-        padding-left: 15px;
-        flex: 1;
-      }
-      #dashboardScreen {
-        background-color: #004d99;
-        color: white;
-        overflow: visible;
-      }
-      #interestedScreen {
-        color: black;
-        background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) ),url("pots.jpeg");
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-      #aboutTitle {
-        text-align: left;
-      }
-      #signUpButton {
-        display: block;
-        width: max-content;
-        margin: auto;
-      }
-      #returningUser {
-        text-align: center;
-        color: black;
-        display: block;
-        width: max-content;
-        margin:auto;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="navbar" >
-      <ul class="navbarList">
-        <li class="current" id="navMyFootprint"><a href="#welcomeScreen">My Footprint</a></li>
-        <li class="current"><a href="#aboutAnchor">About</a></li>
-        <li class="current"><a href="#dashboardAnchor">What/How</a></li>
-        <li class="current"><a href="#interestedAnchor">Contact Us</a></li>
-        <li class="current"><a href="#">Login/Register</a></li>
-      </ul>
+   for (var i=0; i < panels.length; i++) {
+     panels[i].style.display = "none";
+   }
+   for (var i=0; i < dots.length; i++) {
+     dots[i].classList.remove("active");
+   }
+   panels[slideIndex-1].style.display = "flex";
+   dots[slideIndex  -1].classList.add("active");
+ }
+
+</script>
+
+<body>
+  <div id="navbar" >
+    <ul class="navbarList">
+      <li class="current" id="navMyFootprint"><a href="#welcomeScreen">My Footprint</a></li>
+      <li class="current"><a href="#aboutAnchor">About</a></li>
+      <li class="current"><a href="#dashboardAnchor">What/How</a></li>
+      <li class="current"><a href="#interestedAnchor">Contact Us</a></li>
+      <li class="current"><a href="#">Login/Register</a></li>
+    </ul>
+  </div>
+  <div id="welcomeScreen" class="fullScreen">
+    <div class="screenWrapper">
+      <div class="screenContent">
+        <h1>Project Green Challenge</h1>
+        <p>
+          Lorem ipsum dolor sit amet, sed cu brute soleat, laoreet platonem et
+          nam. At his eleifend constituto, et verear hendrerit scripserit vis.
+        </p>
+        <a class="actionButton">Get Started</a>
+      </div>
     </div>
-    <div id="welcomeScreen" class="fullScreen">
-      <div class="screenWrapper">
-        <div class="screenContent">
-          <h1>Project Green Challenge</h1>
+  </div>
+  <span id="aboutAnchor" class="pageAnchor"></span>
+  <div id="aboutScreen" class="fullScreen">
+    <div class="screenWrapper">
+      <div class="screenContent" id="aboutContent">
+        <div id="aboutImageCont">
+          <!--
+               <img id="aboutImage" src="plant.jpeg">
+          -->
+        </div>
+        <div id="aboutTextCont">
+          <h3 id="aboutTitle">About</h3>
           <p>
             Lorem ipsum dolor sit amet, sed cu brute soleat, laoreet platonem et
             nam. At his eleifend constituto, et verear hendrerit scripserit vis.
+            Et illud adolescens sea, sit at sanctus volutpat aliquando.
+            At aperiri appellantur disputationi pri, in cum graeci audire,
+            ei eos rebum laudem eligendi. Eos no dicat volumus fabellas.
           </p>
-          <a class="actionButton">Get Started</a>
+          <p>
+            Alia diceret id eam, per eros timeam an. Nulla antiopam mea ad,
+            sit cu reque platonem. No utinam offendit nec, in augue nihil qui,
+            quo nibh vivendum scripserit ne. Amet falli elitr eu vis.
+          </p>
         </div>
       </div>
     </div>
-    <span id="aboutAnchor" class="pageAnchor"></span>
-    <div id="aboutScreen" class="fullScreen">
-      <div class="screenWrapper">
-        <div class="screenContent" id="aboutContent">
-          <div id="aboutImageCont">
-            <img id="aboutImage" src="plant.jpeg">
+  </div>
+  <span id="dashboardAnchor" class="pageAnchor"></span>
+  <div id="dashboardScreen" class="fullScreen">
+    <div class="screenWrapper">
+      <div class="screenContent">
+        <div class="carouselDiv">
+          <div class="panel fade">
+            <div class="panelImg">
+              <!-- 
+                   <img src="graph.jpeg">
+              -->
+            </div>
+            <div class="panelText">
+              <h3>Dashboard</h3>
+              <p>
+                Lorem ipsum dolor sit amet, quod vocent definiebas mei in,
+                melius maiorum salutandi nec in. Sea nulla neglegentur eu,
+                nostrud.
+              </p>
+            </div>
           </div>
-          <div id="aboutTextCont">
-            <h3 id="aboutTitle">About</h3>
-            <p>
-              Lorem ipsum dolor sit amet, sed cu brute soleat, laoreet platonem et
-               nam. At his eleifend constituto, et verear hendrerit scripserit vis.
-                Et illud adolescens sea, sit at sanctus volutpat aliquando.
-                At aperiri appellantur disputationi pri, in cum graeci audire,
-                 ei eos rebum laudem eligendi. Eos no dicat volumus fabellas.
-            </p>
-            <p>
-              Alia diceret id eam, per eros timeam an. Nulla antiopam mea ad,
-              sit cu reque platonem. No utinam offendit nec, in augue nihil qui,
-               quo nibh vivendum scripserit ne. Amet falli elitr eu vis.
-            </p>
+          <div class="panel fade">
+            <div class="panelImg">
+              <!-- 
+                   <img src="graph.jpeg">
+              -->
+            </div>
+            <div class="panelText">
+              <h3> Themes</h3>
+              <p>
+                Lorem ipsum dolor sit amet, quod vocent definiebas mei in,
+                melius maiorum salutandi nec in. Sea nulla neglegentur eu,
+                nostrud.
+              </p>
+            </div>
           </div>
+          <div class="panel fade">
+            <div class="panelImg">
+              <!-- 
+                   <img src="graph.jpeg">
+              -->
+            </div>
+            <div class="panelText">
+              <h3> Challenges </h3>
+              <p>
+                Lorem ipsum dolor sit amet, quod vocent definiebas mei in,
+                melius maiorum salutandi nec in. Sea nulla neglegentur eu,
+                nostrud.
+              </p>
+            </div>
+          </div>
+          <div class="panel fade">
+            <div class="panelImg">
+              <!-- 
+                   <img src="graph.jpeg">
+              -->
+            </div>
+            <div class="panelText">
+              <h3> Rewards</h3>
+              <p>
+                Lorem ipsum dolor sit amet, quod vocent definiebas mei in,
+                melius maiorum salutandi nec in. Sea nulla neglegentur eu,
+                nostrud.
+              </p>
+            </div>
+          </div>
+          <a class="prev" onclick="navigate(-1)">&#10094;</a>
+          <a class="next" onclick="navigate(1)">&#10095;</a>
+        </div>
+        <br>
+        <div class="carouselDots">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
         </div>
       </div>
     </div>
-    <span id="dashboardAnchor" class="pageAnchor"></span>
-    <div id="dashboardScreen" class="fullScreen">
-      <div class="screenWrapper">
-        <div class="screenContent">
-          <div class="carouselDiv">
-            <div class="panel fade">
-              <div class="panelImg">
-                <img src="graph.jpeg">
-              </div>
-              <div class="panelText">
-                <h3>Dashboard</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, quod vocent definiebas mei in,
-                   melius maiorum salutandi nec in. Sea nulla neglegentur eu,
-                   nostrud.
-                </p>
-              </div>
-            </div>
-            <div class="panel fade">
-              <div class="panelImg">
-                <img src="graph.jpeg">
-              </div>
-              <div class="panelText">
-                <h3> Themes</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, quod vocent definiebas mei in,
-                   melius maiorum salutandi nec in. Sea nulla neglegentur eu,
-                   nostrud.
-                </p>
-              </div>
-            </div>
-            <div class="panel fade">
-              <div class="panelImg">
-                <img src="graph.jpeg">
-              </div>
-              <div class="panelText">
-                <h3> Challenges </h3>
-                <p>
-                  Lorem ipsum dolor sit amet, quod vocent definiebas mei in,
-                   melius maiorum salutandi nec in. Sea nulla neglegentur eu,
-                   nostrud.
-                </p>
-              </div>
-            </div>
-            <div class="panel fade">
-              <div class="panelImg">
-                <img src="graph.jpeg">
-              </div>
-              <div class="panelText">
-                <h3> Rewards</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, quod vocent definiebas mei in,
-                   melius maiorum salutandi nec in. Sea nulla neglegentur eu,
-                   nostrud.
-                </p>
-              </div>
-            </div>
-            <a class="prev" onclick="navigate(-1)">&#10094;</a>
-            <a class="next" onclick="navigate(1)">&#10095;</a>
-          </div>
-          <br>
-          <div class="carouselDots">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-          </div>
-        </div>
+  </div>
+  <span id="interestedAnchor" class="pageAnchor"></span>
+  <div id="interestedScreen" class="fullScreen">
+    <div class="screenWrapper">
+      <div class="screenContent">
+        <h3>Interested in out Mission?</h3>
+
+        <a class="actionButton" href="#" id="signUpButton">Sign Up</a>
+        <br>
+        <a href="#" id="returningUser">Already have an account? Sign in here.</a>
+
       </div>
     </div>
-    <span id="interestedAnchor" class="pageAnchor"></span>
-    <div id="interestedScreen" class="fullScreen">
-      <div class="screenWrapper">
-        <div class="screenContent">
-          <h3>Interested in out Mission?</h3>
+  </div>
+  <div class="footerScreen">
 
-            <a class="actionButton" href="#" id="signUpButton">Sign Up</a>
-            <br>
-            <a href="#" id="returningUser">Already have an account? Sign in here.</a>
+  </div>
+</body>
 
-        </div>
-      </div>
-    </div>
-    <div class="footerScreen">
-
-    </div>
-    <script>
-      var slideIndex = 1;
-      var panels = document.getElementsByClassName("panel");
-      var dots   = document.getElementsByClassName("dot");
-      showSlides(slideIndex);
-
-      function navigate(n) {
-        showSlides(slideIndex += n);
-      }
-
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        if (n > panels.length) {slideIndex = 1}
-        if (n < 1)             {slideIndex = panels.length}
-
-        for (var i=0; i < panels.length; i++) {
-          panels[i].style.display = "none";
-        }
-        for (var i=0; i < dots.length; i++) {
-          dots[i].classList.remove("active");
-        }
-        panels[slideIndex-1].style.display = "flex";
-        dots[slideIndex  -1].classList.add("active");
-      }
-    </script>
-  </body>
-</html>

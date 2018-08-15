@@ -8,6 +8,9 @@ services:
 before_install:
 - sudo /etc/init.d/postgresql stop
 - docker-compose build
+- docker-compose run web rails db:create
+- docker-compose run web rails db:migrate
+- docker-compose run web rake task:importjson
 
 script:
 - docker-compose run --rm web bundle exec rspec

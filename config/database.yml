@@ -5,7 +5,7 @@ default: &default
   username: postgres
   password: <%= ENV['POSTGRES_PASS'] %>
   pool: 5
-  
+
 development:
   <<: *default
   database: turninggreen_dev
@@ -14,4 +14,13 @@ test:
   <<: *default
   database: turninggreen_test
 
-  
+production:
+   <<: *default
+   adapter: postgresql
+   encoding: unicode
+   database: <%= ENV['RDS_DB_NAME'] %>
+   username: <%= ENV['RDS_USERNAME'] %>
+   password: <%= ENV['RDS_PASSWORD'] %>
+   host: <%= ENV['RDS_HOSTNAME'] %>
+   port: <%= ENV['RDS_PORT'] %> 
+

@@ -1,0 +1,50 @@
+// Place all the styles related to the login controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #fff;
+}
+
+span {
+  color: #000;
+}
+
+a.createAccount {
+  color: #7FA86F;
+}
+
+.loginContainer {
+  padding-top: 87px;
+  padding-bottom: 5px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.formContainer {
+  margin: 65px 30px;
+  text-align: center;
+}
+
+.field {
+  width: 350px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.loginButton {
+  width: 371px;
+  height: 50px;
+  background-color: #7FA86F;
+  color: #fff;
+  border: none;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.navigateRegister {
+  font-style: italic;
+}

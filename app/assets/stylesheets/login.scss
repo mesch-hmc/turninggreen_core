@@ -18,11 +18,19 @@ a.createAccount {
   padding-bottom: 5px;
   width: 100%;
   background-color: #fff;
+  display:flex;
+  justify-content: center;
+  color: black;
 }
 
 .formContainer {
   margin: 65px 30px;
   text-align: center;
+}
+
+.forgotPwdMessage {
+  font-size: 18px;
+  font-style: italic;
 }
 
 .inputField {

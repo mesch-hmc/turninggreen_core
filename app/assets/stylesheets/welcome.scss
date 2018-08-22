@@ -215,6 +215,7 @@ p {
 #signUpButton {
   text-align: center;
 }
+
 #welcomeScreen {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ); //,url("./../images/plant.jpeg");
   /* background-image: url("group.jpeg"); */
@@ -254,6 +255,7 @@ p {
   background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) ); //,url("./../images/plant.jpeg");
   background-position: center;
   background-repeat: no-repeat;
+  text-align: center;
 }
 #aboutTitle {
   text-align: left;
@@ -267,7 +269,7 @@ p {
 #returningUser {
   text-align: center;
   color: black;
-  display: block;
+  display: inline;
   width: max-content;
   margin:auto;
 }

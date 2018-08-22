@@ -1,0 +1,70 @@
+<div id="navbar" >
+  <ul class="navbarList">
+    <li class="current" id="navMyFootprint"><a href="#welcomeScreen">My Footprint</a></li>
+    <li class="current"><a href="#aboutAnchor">About</a></li>
+    <li class="current"><a href="#dashboardAnchor">What/How</a></li>
+    <li class="current"><a href="#interestedAnchor">Contact Us</a></li>
+    <li class="current"><a href="/login">Login/Register</a></li>
+  </ul>
+</div>
+
+<div class="loginContainer">
+  <div class="formContainer">
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "First name or nickname", :class => "inputField", :required => true %>
+        <span class="required">*</span>
+      </div>
+
+
+      <div>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email@example.com", :class => "inputField", :required => true %>
+        <span class="required">*</span>
+      </div>
+
+      <div class="formGroup">
+        <span>
+          <%= f.text_field :state, autocomplete: "state", placeholder: "State", :class => "inputField inputFieldSm", :required => true %>
+        </span>
+        <span class="required">*</span>
+
+        <span>
+          <%= f.text_field :country, autocomplete: "country", placeholder: "Country", :class => "inputField inputFieldSm", :required => true %>
+        </span>
+        <span class="required">*</span>
+      </div>
+
+      <div>
+        <%= f.text_field :birthday, autocomplete: "birthday", placeholder: "Birthday mm/dd/yyyy ", :class => "inputField", :required => true %>
+        <span class="required">*</span>
+      </div>
+
+      <div>
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", :class => "inputField", :required => true %>
+        <span class="required">*</span>
+      </div>
+
+      <div>
+        <%= f.password_field :password, placeholder: "Reenter password", :class => "inputField", :required => true %>
+        <span class="required">*</span>
+      </div>
+
+      <div>
+        <%= f.text_field :referral, placeholder: "How did you hear about us?", :class => "inputField", :required => true %>
+        <span class="required">*</span>
+      </div>
+
+      <div class="termsAndConditions">
+        <i>By registering, I agreee to Terms and Conditions (and more legal stuff)</i>
+      </div>
+
+      <div>
+        <%= f.submit "REGISTER", :class => "actions submitButton"%>
+      </div>
+
+    <% end %>
+  </div>
+</div>

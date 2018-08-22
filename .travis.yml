@@ -1,16 +1,11 @@
-sudo: required
-
 language: ruby
-
+rvm:
+  - 2.5.1
+cache: bundler
 services:
-  - docker
+  - postgresql
+before_script:
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
+script: bundle exec rspec  
 
-before_install:
-- sudo /etc/init.d/postgresql stop
-- docker-compose build
-- docker-compose run web rails db:create
-- docker-compose run web rails db:migrate
-- docker-compose run web rake task:importjson
-
-script:
-- docker-compose run --rm web bundle exec rspec

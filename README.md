@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mesch-hmc/turninggreen_core.svg?branch=master)](https://travis-ci.org/mesch-hmc/turninggreen_core)
+
 # Turning Green Core
 
 This repo contains the backend for various Turning Green stuff.

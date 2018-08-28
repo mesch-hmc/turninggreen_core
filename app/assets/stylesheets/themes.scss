@@ -1,0 +1,91 @@
+// Place all the styles related to the Themes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+.themesPage {
+  margin: 50px 0;
+  color: black;
+  text-align: center;
+}
+
+.themesRow {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.theme {
+  margin: auto;
+}
+
+.thumbnail {
+  position: relative;
+  cursor: pointer;
+}
+
+.caption {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  width: 200px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #717272;
+}
+
+.thumbnail:hover .overlay{
+  opacity: 1;
+}
+
+.overlayText {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.themesTitle, .themesHelpText, .helpText, .modalHeader {
+  margin-bottom: 20px;
+}
+
+.helpText, .modalHeader, .themeVideo {
+  color: #fff;
+}
+
+.helpText, .themesHelpText {
+  font-size: 15px;
+}
+
+.themesContainer {
+  margin-top: 80px;
+}
+
+.modal-content {
+  border-radius: 12px;
+}
+
+.modal-dialog {
+  max-width: none;
+  margin: 1.75em 15%;
+}
+
+.modal-body {
+  background-color: #26A9E0;
+  border-radius: 10px;
+}

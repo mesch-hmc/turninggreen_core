@@ -37,14 +37,11 @@ p {
 .navbarList {
   font-size: 21px;
   line-height: 2em;
-  margin-top: 0px;
+  margin: 0px auto 0px auto;
   text-transform: uppercase;
   text-align: center;
-  position: fixed;
   right: 0;
   left: 0;
-  margin-left: auto;
-  margin-right: auto;
   width: 100%;
   padding: 0;
   background-color: #7FA86F;
@@ -78,9 +75,7 @@ p {
   background-color: #cc685d;
   text-decoration: underline;
 }
-.footerScreen {
-  height: 20vh;
-}
+
 /* carousel stuff */
 .carouselDiv {
   width: 100%;
@@ -177,39 +172,47 @@ p {
 }
 
 .footer{
-    width: 100%;
-    min-height: 50vh;
-    text-align: center;
+  width: 100%;
+  text-align: center;
+  background-color: #262827;
+  color: #818282;
 }
 
 .socialMedList{
-/*    border-top: 1px solid #ddd;*/
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  text-align: center;
 }
 
-.socialMedList li{
-    display: inline-block;
-    width: 30px;
-    padding: 15px;
-    position: relative;
+.fa {
+  color: #77b454;
 }
 
-.footerBottom{
-    width: 100%;
-    padding: 0;
+.socialMedList div{
+  display: inline-block;
+  width: 30px;
+  padding: 15px;
+  position: relative;
+  margin: 0 20px;
+}
+
+.footerBottom {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
 .footerBottom li{
-    width: 33%;
-    display: inline-block;
-    text-align: center;
-    color: #494C4A;
-    font-size: 15px;
-    padding: 0px;
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+  color: #494C4A;
+  font-size: 15px;
+  padding: 0px;
 }
 
 #signUpButton {

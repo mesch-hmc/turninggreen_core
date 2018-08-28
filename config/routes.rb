@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     get 'register', to: 'devise/registrations#new'
   end
 
+  get '/themes' => 'themes#index'
   resources :tips_daily, only: [:index, :show]
 end

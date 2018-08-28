@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
   <%= render "layouts/header"%>
-  <%= yield %>
-  <%= render "layouts/footer"%>
+  <body>
+    <div id="navbar" >
+      <ul class="navbarList">
+        <li class="current" id="navMyFootprint"><a href="#welcomeScreen">My Footprint</a></li>
+        <li class="current"><a href="#aboutAnchor">About</a></li>
+        <li class="current"><a href="#dashboardAnchor">What/How</a></li>
+        <li class="current"><a href="#interestedAnchor">Contact Us</a></li>
+        <li class="current"><a href="/login">Login/Register</a></li>
+      </ul>
+    </div>
+    <%= yield %>
+    <%= render "layouts/footer"%>
+  </body>
 </html>

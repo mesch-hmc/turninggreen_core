@@ -1,0 +1,37 @@
+// Place all the styles related to the ecofootprintscore controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.ecofootprint {
+  width: 550px;
+  font-size: 27px;
+}
+
+.ecoFootprintText {
+  width: 550px;
+  font-size: 21px;
+  align: left;
+}
+
+
+.ecoInputField {
+  width: 550px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.ecoSubmitButton {
+  width: 571px;
+  height: 50px;
+  background-color: #7FA86F;
+  color: #fff;
+  border: none;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+

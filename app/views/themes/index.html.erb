@@ -2,19 +2,25 @@
   <h1 class="themesTitle">THEMES</h1>
   <p class="themesHelpText">Text about unlocking themes by watching embedded videos! Filler text here.</p>
   <div class="themesContainer container">
-    <div class="themesRow">
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
+    <div class="row">
+      <div class="theme col-md-4">
+        <div class="imageContainer text-center" data-toggle="modal" data-target="#wasteModal">
           <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 1</div>
+          <div class="caption">Waste</div>
           <div class="overlay">
-            <div class="overlayText">Hello World</div>
+            <div><%= fa_icon "lock", class: 'overlayText' %></div>
           </div>
         </div>
 
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+
+        <div class="modal" id="wasteModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
               <div class="modal-body">
                 <h1 class="modalHeader">UNLOCK WASTE</h1>
                 <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
@@ -27,21 +33,21 @@
         </div>
       </div>
 
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
+      <div class="theme col-md-4">
+        <div class="imageContainer text-center" data-toggle="modal" data-target="#organicModal">
           <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 2</div>
+          <div class="caption">Organic</div>
           <div class="overlay">
-            <div class="overlayText">Hello World</div>
+            <div><%= fa_icon "lock", class: 'overlayText' %></div>
           </div>
         </div>
 
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal" id="organicModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-body">
-                <h1 class="modalHeader">UNLOCK WASTE</h1>
-                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
+                <h1 class="modalHeader">UNLOCK ORGANIC</h1>
+                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about organic</p>
                 <div class="themeVideo">
                   [Video goes here]
                 </div>
@@ -51,95 +57,21 @@
         </div>
       </div>
 
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
+      <div class="theme col-md-4">
+        <div class="imageContainer text-center" data-toggle="modal" data-target="#foodModal">
           <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 3</div>
+          <div class="caption">Food</div>
           <div class="overlay">
-            <div class="overlayText">Hello World</div>
+            <div><%= fa_icon "lock", class: 'overlayText' %></div>
           </div>
         </div>
 
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal" id="foodModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-body">
-                <h1 class="modalHeader">UNLOCK WASTE</h1>
-                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
-                <div class="themeVideo">
-                  [Video goes here]
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="themesRow">
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
-          <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 4</div>
-          <div class="overlay">
-            <div class="overlayText">Hello World</div>
-          </div>
-        </div>
-
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-body">
-                <h1 class="modalHeader">UNLOCK WASTE</h1>
-                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
-                <div class="themeVideo">
-                  [Video goes here]
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
-          <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 5</div>
-          <div class="overlay">
-            <div class="overlayText">Hello World</div>
-          </div>
-        </div>
-
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-body">
-                <h1 class="modalHeader">UNLOCK WASTE</h1>
-                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
-                <div class="themeVideo">
-                  [Video goes here]
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
-          <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 6</div>
-          <div class="overlay">
-            <div class="overlayText">Hello World</div>
-          </div>
-        </div>
-
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-body">
-                <h1 class="modalHeader">UNLOCK WASTE</h1>
-                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
+                <h1 class="modalHeader">UNLOCK FOOD</h1>
+                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about food</p>
                 <div class="themeVideo">
                   [Video goes here]
                 </div>
@@ -150,22 +82,22 @@
       </div>
     </div>
 
-    <div class="themesRow">
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
+    <div class="row">
+      <div class="theme col-md-4">
+        <div class="imageContainer text-center" data-toggle="modal" data-target="#bodyModal">
           <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 7</div>
+          <div class="caption">Body</div>
           <div class="overlay">
-            <div class="overlayText">Hello World</div>
+            <div><%= fa_icon "lock", class: 'overlayText' %></div>
           </div>
         </div>
 
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal" id="bodyModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-body">
-                <h1 class="modalHeader">UNLOCK WASTE</h1>
-                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
+                <h1 class="modalHeader">UNLOCK BODY</h1>
+                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about body</p>
                 <div class="themeVideo">
                   [Video goes here]
                 </div>
@@ -175,21 +107,21 @@
         </div>
       </div>
 
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
+      <div class="theme col-md-4">
+        <div class="imageContainer text-center" data-toggle="modal" data-target="#cleanModal">
           <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 8</div>
+          <div class="caption">Clean</div>
           <div class="overlay">
-            <div class="overlayText">Hello World</div>
+            <div><%= fa_icon "lock", class: 'overlayText' %></div>
           </div>
         </div>
 
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal" id="cleanModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-body">
-                <h1 class="modalHeader">UNLOCK WASTE</h1>
-                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
+                <h1 class="modalHeader">UNLOCK CLEAN</h1>
+                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about clean</p>
                 <div class="themeVideo">
                   [Video goes here]
                 </div>
@@ -199,95 +131,21 @@
         </div>
       </div>
 
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
+      <div class="theme col-md-4">
+        <div class="imageContainer text-center" data-toggle="modal" data-target="#homeModal">
           <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 9</div>
+          <div class="caption">Home</div>
           <div class="overlay">
-            <div class="overlayText">Hello World</div>
+            <div><%= fa_icon "lock", class: 'overlayText' %></div>
           </div>
         </div>
 
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal" id="homeModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-body">
-                <h1 class="modalHeader">UNLOCK WASTE</h1>
-                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
-                <div class="themeVideo">
-                  [Video goes here]
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="themesRow">
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
-          <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 10</div>
-          <div class="overlay">
-            <div class="overlayText">Hello World</div>
-          </div>
-        </div>
-
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-body">
-                <h1 class="modalHeader">UNLOCK WASTE</h1>
-                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
-                <div class="themeVideo">
-                  [Video goes here]
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
-          <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 11</div>
-          <div class="overlay">
-            <div class="overlayText">Hello World</div>
-          </div>
-        </div>
-
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-body">
-                <h1 class="modalHeader">UNLOCK WASTE</h1>
-                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
-                <div class="themeVideo">
-                  [Video goes here]
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
-          <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 12</div>
-          <div class="overlay">
-            <div class="overlayText">Hello World</div>
-          </div>
-        </div>
-
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-body">
-                <h1 class="modalHeader">UNLOCK WASTE</h1>
-                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
+                <h1 class="modalHeader">UNLOCK HOME</h1>
+                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about home</p>
                 <div class="themeVideo">
                   [Video goes here]
                 </div>
@@ -298,22 +156,22 @@
       </div>
     </div>
 
-    <div class="themesRow">
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
+    <div class="row">
+      <div class="theme col-md-4">
+        <div class="imageContainer text-center" data-toggle="modal" data-target="#waterModal">
           <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 13</div>
+          <div class="caption">Water</div>
           <div class="overlay">
-            <div class="overlayText">Hello World</div>
+            <div><%= fa_icon "lock", class: 'overlayText' %></div>
           </div>
         </div>
 
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal" id="waterModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-body">
-                <h1 class="modalHeader">UNLOCK WASTE</h1>
-                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
+                <h1 class="modalHeader">UNLOCK WATER</h1>
+                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about water</p>
                 <div class="themeVideo">
                   [Video goes here]
                 </div>
@@ -323,21 +181,21 @@
         </div>
       </div>
 
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
+      <div class="theme col-md-4">
+        <div class="imageContainer text-center" data-toggle="modal" data-target="#biodiversityModal">
           <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 14</div>
+          <div class="caption">Biodiversity</div>
           <div class="overlay">
-            <div class="overlayText">Hello World</div>
+            <div><%= fa_icon "lock", class: 'overlayText' %></div>
           </div>
         </div>
 
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal" id="biodiversityModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-body">
-                <h1 class="modalHeader">UNLOCK WASTE</h1>
-                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
+                <h1 class="modalHeader">UNLOCK BIODIVERSITY</h1>
+                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about biodiversity</p>
                 <div class="themeVideo">
                   [Video goes here]
                 </div>
@@ -347,21 +205,21 @@
         </div>
       </div>
 
-      <div class="theme">
-        <div class="thumbnail text-center" data-toggle="modal" data-target=".modalCenter">
+      <div class="theme col-md-4">
+        <div class="imageContainer text-center" data-toggle="modal" data-target="#econModal">
           <%= image_tag("placeholder.png") %>
-          <div class="caption">THEME 15</div>
+          <div class="caption">Economics</div>
           <div class="overlay">
-            <div class="overlayText">Hello World</div>
+            <div><%= fa_icon "lock", class: 'overlayText' %></div>
           </div>
         </div>
 
-        <div class="modal modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal" id="econModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-body">
-                <h1 class="modalHeader">UNLOCK WASTE</h1>
-                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about waste</p>
+                <h1 class="modalHeader">UNLOCK ECONOMICS</h1>
+                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about economics</p>
                 <div class="themeVideo">
                   [Video goes here]
                 </div>
@@ -370,6 +228,131 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="row">
+      <div class="theme col-md-4">
+        <div class="imageContainer text-center" data-toggle="modal" data-target="#wellnessModal">
+          <%= image_tag("placeholder.png") %>
+          <div class="caption">Wellness</div>
+          <div class="overlay">
+            <div><%= fa_icon "lock", class: 'overlayText' %></div>
+          </div>
+        </div>
+
+        <div class="modal" id="wellnessModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <h1 class="modalHeader">UNLOCK WELLNESS</h1>
+                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about wellness</p>
+                <div class="themeVideo">
+                  [Video goes here]
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="theme col-md-4">
+        <div class="imageContainer text-center" data-toggle="modal" data-target="#fashionModal">
+          <%= image_tag("placeholder.png") %>
+          <div class="caption">Fashion</div>
+          <div class="overlay">
+            <div><%= fa_icon "lock", class: 'overlayText' %></div>
+          </div>
+        </div>
+
+        <div class="modal" id="fashionModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <h1 class="modalHeader">UNLOCK FASHION</h1>
+                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about fashion</p>
+                <div class="themeVideo">
+                  [Video goes here]
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="theme col-md-4">
+        <div class="imageContainer text-center" data-toggle="modal" data-target="#travelModal">
+          <%= image_tag("placeholder.png") %>
+          <div class="caption">Travel</div>
+          <div class="overlay">
+            <div><%= fa_icon "lock", class: 'overlayText' %></div>
+          </div>
+        </div>
+
+        <div class="modal" id="travelModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <h1 class="modalHeader">UNLOCK TRAVEL</h1>
+                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about travel</p>
+                <div class="themeVideo">
+                  [Video goes here]
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="theme col-md-4">
+        <div class="imageContainer text-center" data-toggle="modal" data-target="#energyModal">
+          <%= image_tag("placeholder.png") %>
+          <div class="caption">Energy</div>
+          <div class="overlay">
+            <div><%= fa_icon "lock", class: 'overlayText' %></div>
+          </div>
+        </div>
+
+        <div class="modal" id="energyModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <h1 class="modalHeader">UNLOCK ENERGY</h1>
+                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about energy</p>
+                <div class="themeVideo">
+                  [Video goes here]
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="theme col-md-4">
+        <div class="imageContainer text-center" data-toggle="modal" data-target="#fairtradeModal">
+          <%= image_tag("placeholder.png") %>
+          <div class="caption">Fair Trade</div>
+          <div class="overlay">
+            <div><%= fa_icon "lock", class: 'overlayText' %></div>
+          </div>
+        </div>
+
+        <div class="modal" id="fairtradeModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <h1 class="modalHeader">UNLOCK FAIR TRADE</h1>
+                <p class="helpText">In order to unlock this theme, watch this video segment to learn more about fair trade</p>
+                <div class="themeVideo">
+                  [Video goes here]
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

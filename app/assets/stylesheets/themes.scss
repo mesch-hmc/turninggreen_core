@@ -2,33 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 .themesPage {
   margin: 50px 0;
   color: black;
   text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 
-.themesRow {
+.row {
   margin-bottom: 40px;
-  display: flex;
-  justify-content: center;
 }
 
 .theme {
-  margin: auto;
+  padding: 0 90px;
 }
 
-.thumbnail {
+.imageContainer {
   position: relative;
   cursor: pointer;
 }
 
 .caption {
   position: absolute;
-  top: 45%;
+  top: 42%;
   left: 0;
   width: 100%;
   color: #fff;
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 .overlay {
@@ -39,24 +42,17 @@
   right: 0;
   height: 200px;
   width: 200px;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #717272;
-}
-
-.thumbnail:hover .overlay{
-  opacity: 1;
 }
 
 .overlayText {
   color: white;
   font-size: 15px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  top: 90%;
+  left: 90%;
+  -webkit-transform: translate(-90%, -90%);
+  -ms-transform: translate(-90%, -90%);
+  transform: translate(-90%, -90%);
   text-align: center;
 }
 
@@ -78,6 +74,20 @@
 
 .modal-content {
   border-radius: 12px;
+  background-color: #26A9E0;
+}
+
+.modal-header {
+  border-bottom: 0;
+}
+
+.close {
+  text-shadow: 0;
+  opacity: 1;
+}
+
+.close span {
+  color: #fff;
 }
 
 .modal-dialog {
@@ -86,6 +96,5 @@
 }
 
 .modal-body {
-  background-color: #26A9E0;
   border-radius: 10px;
 }

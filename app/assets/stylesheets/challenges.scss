@@ -1,0 +1,124 @@
+// Place all the styles related to the Challenges controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+
+.challenges-summary {
+  position: relative;
+}
+
+img.challenges-header-img {
+  object-fit: cover;
+  height: 350px;
+  width: 100%;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.challenges-desc {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  padding: 0 10%;
+}
+
+.all-challenges {
+  margin: 40px 0;
+}
+
+.challenges-header {
+  font-size: 20px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.accordion {
+  margin: 0 20%;
+}
+
+.btn.btn-link, .btn.btn-link:hover {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+}
+
+.accordion-toggle:after {
+    font-family: 'FontAwesome';
+    content: "\f078";
+    float: right;
+}
+.accordion-opened .accordion-toggle:after {
+    content: "\f054";
+}
+.card {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.125) !important;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.card:first-child {
+  border-top: 2px solid rgba(0, 0, 0, 0.125) !important;
+}
+
+.card-header {
+  background-color: #fff;
+  border-bottom: 0;
+}
+
+.card-body, select.form-control, input.form-control, .learn-more-header {
+  font-size: 13px;
+}
+
+.learn-more-header {
+  font-weight: bold;
+}
+
+select.form-control, input.form-control {
+  height: 30px;
+  border: 1px solid #000;
+}
+
+input.form-control {
+  text-align: right;
+}
+
+select.form-control {
+  text-align-last: center;
+}
+
+.learn-more p, .challenge-duration p {
+  margin: 25px 0 0 0;
+}
+
+.learn-more-text {
+  color: #90B582;
+}
+
+.get-started-btn {
+  background-color: #F05648;
+  width: 100%;
+  color: #fff;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 0;
+}
+
+.get-started-btn:focus, .get-started-btn:active {
+  outline: none !important;
+  box-shadow: none;
+}

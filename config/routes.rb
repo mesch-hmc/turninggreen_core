@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   get '/themes' => 'themes#index'
   resources :tips_daily, only: [:index, :show]
+
+  get '/challenges/waste' => 'challenges#index'
 end

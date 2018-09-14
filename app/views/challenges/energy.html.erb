@@ -1,0 +1,85 @@
+<div class="challenges-summary">
+  <%= image_tag("waste.jpeg", class: 'challenges-header-img') %>
+  <div class="image-overlay"></div>
+  <div class="challenges-desc">
+    <h1>ENERGY</h1>
+    <p>
+      Three fossil fuels – petroleum, natural gas, and coal – have dominated the energy sector for more
+      than 100 years and emit tons of CO2 and other greenhouse gases, polluting our cities and our atmosphere.
+      What is the alternative when the world is becoming more energy dependent? Technology for renewable energy
+      from sources like wind and sun is ever expanding. These are resources that aren’t running out anytime soon,
+      and they could allow future generations to meet their energy needs.
+    </p>
+  </div>
+</div>
+
+<div class="all-challenges">
+  <div class="challenges-header">CHALLENGES</div>
+  <div class="accordion" id="challenge-accordion">
+
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="accordion-toggle btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            AIR DRY
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#challenge-accordion">
+        <div class="card-body container">
+          <div class="row">
+            <div src="" class="col-md-2">
+              <%= image_tag("placeholder.png", size: '100x100') %>
+            </div>
+            <div class="card-body-text col-md-10">
+              <div>
+                Take a break from your busy schedule and hang dry your clothes. It shouldn't take more
+                than 30 minutes. Using a dryer increases your electricity bill and increases CO2 emissions.
+                In America alone, $9 billion is spent annually to dry clothes! Save that clothes drying money
+                to treat yourself later today or later this week. In addition, turn off your dishwasher
+                (if you use one) at the end of wash cycle and air dry those dishes. This can save as much
+                as 50% power usage because the heat used in the dry cycle is energy intensive.
+              </div>
+
+              <div class="learn-more">
+                <p class="learn-more-header">Learn more</p>
+                <ul>
+                  <li>
+                    <a class="learn-more-text" href="https://grist.org/climate-energy/your-clothes-dryer-is-a-huge-energy-waster/">Dryer</a>
+                  </li>
+                  <li>
+                    <a class="learn-more-text" href="https://grist.org/living/whats-the-most-eco-friendly-dishwasher-cycle/">Dishwasher</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="challenge-duration">
+                <p class="learn-more-header">How long do you want to take the challenge for?</p>
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-3">
+                      <input type="text" class="form-control" placeholder="3">
+                    </div>
+                    <div class="form-group col-md-3">
+                      <select class="form-control" id="inputInterval">
+                        <option>Choose interval</option>
+                        <option>day(s)</option>
+                        <option>week(s)</option>
+                        <option>month(s)</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <button class="get-started-btn">
+                GET STARTED ON THIS CHALLENGE!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

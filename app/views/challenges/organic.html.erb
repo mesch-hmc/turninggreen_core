@@ -1,0 +1,84 @@
+<div class="challenges-summary">
+  <%= image_tag("waste.jpeg", class: 'challenges-header-img') %>
+  <div class="image-overlay"></div>
+  <div class="challenges-desc">
+    <h1>ORGANIC</h1>
+    <p>Why organic? At the most basic level, organic means that a product was produced without harm to
+      soil, water, air, humans and all species (like honeybees!)–– promoting ecological health and biodiversity.
+      Buying certified organic also means you’re supporting farmers and businesses that are placing human and
+      environmental health before profit.</p>
+  </div>
+</div>
+
+<div class="all-challenges">
+  <div class="challenges-header">CHALLENGES</div>
+  <div class="accordion" id="challenge-accordion">
+
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="accordion-toggle btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            PURCHASE ONLY ORGANIC PRODUCE FROM THE DIRTY DOZEN AND/OR GO TO THE CLEAN 15
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#challenge-accordion">
+        <div class="card-body container">
+          <div class="row">
+            <div src="" class="col-md-2">
+              <%= image_tag("placeholder.png", size: '100x100') %>
+            </div>
+            <div class="card-body-text col-md-10">
+              <div>
+                Sometimes, it can be difficult to choose organic due to financial, accessibility, and other reasons.
+                However, there are produce that are more important to purchase organic. The Dirty Dozen is an
+                annually updated list of the 12 most pesticide-laden produce based on USDA residue testing.
+                Many studies show the adverse health impact pesticides have on people's health, you can find
+                them all over the web. Look at this list. Buy these produce only if they're organic to avoid
+                consuming the pesticides that were sprayed on them. Almost 70% of all non-organic produce
+                ested positive for at least one pesticide! Produce that you can purchase non-organic is on
+                the Clean 15 list. These produce are least likely to have been sprayed with pesticides.
+              </div>
+
+              <div class="learn-more">
+                <p class="learn-more-header">Learn more</p>
+                <ul>
+                  <li>
+                    <a class="learn-more-text" href="https://draxe.com/dirty-dozen/">Stats</a>
+                  </li>
+                  <li>
+                    <a class="learn-more-text" href="https://www.ewg.org/foodnews/#.Wda291d4bFI">EWG</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="challenge-duration">
+                <p class="learn-more-header">How long do you want to take the challenge for?</p>
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-3">
+                      <input type="text" class="form-control" placeholder="3">
+                    </div>
+                    <div class="form-group col-md-3">
+                      <select class="form-control" id="inputInterval">
+                        <option>Choose interval</option>
+                        <option>day(s)</option>
+                        <option>week(s)</option>
+                        <option>month(s)</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <button class="get-started-btn">
+                GET STARTED ON THIS CHALLENGE!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

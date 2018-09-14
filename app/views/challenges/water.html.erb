@@ -1,0 +1,136 @@
+<div class="challenges-summary">
+  <%= image_tag("waste.jpeg", class: 'challenges-header-img') %>
+  <div class="image-overlay"></div>
+  <div class="challenges-desc">
+    <h1>WATER</h1>
+    <p>
+      Every person on earth needs and deserves clean water – it is a human right. Water covers 70% of our planet,
+      but only 3.5% is fresh water. Of that 3.5%, less than 2% is available for human use. As water use
+      increases and supply dwindles, the pressure for sustainable management of this resource is on us.
+      This means engaging in water conscious practices and conserving wherever we can.
+    </p>
+  </div>
+</div>
+
+<div class="all-challenges">
+  <div class="challenges-header">CHALLENGES</div>
+  <div class="accordion" id="challenge-accordion">
+
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="accordion-toggle btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            BRING YOUR OWN BOTTLE
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#challenge-accordion">
+        <div class="card-body container">
+          <div class="row">
+            <div src="" class="col-md-2">
+              <%= image_tag("placeholder.png", size: '100x100') %>
+            </div>
+            <div class="card-body-text col-md-10">
+              <div>
+                It takes more water to make a plastic bottle for water than the plastic bottle can hold. To be more
+                specific, it takes 1.39 liters of water to make 1 liter of water. That's just wasteful. Simply
+                invest in a good quality water bottle, fill it up, bring it with you everywhere, and you'll
+                never have to buy bottled water again.
+              </div>
+
+              <div class="learn-more">
+                <p class="learn-more-header">Learn more</p>
+                <ul>
+                  <li>
+                    <a class="learn-more-text" href="https://www.npr.org/sections/thesalt/2013/10/28/241419373/how-much-water-actually-goes-into-making-a-bottle-of-water">Stats</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="challenge-duration">
+                <p class="learn-more-header">How long do you want to take the challenge for?</p>
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-3">
+                      <input type="text" class="form-control" placeholder="3">
+                    </div>
+                    <div class="form-group col-md-3">
+                      <select class="form-control" id="inputInterval">
+                        <option>Choose interval</option>
+                        <option>day(s)</option>
+                        <option>week(s)</option>
+                        <option>month(s)</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <button class="get-started-btn">
+                GET STARTED ON THIS CHALLENGE!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="accordion-toggle btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            TAKE SHORTER SHOWERS
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#challenge-accordion">
+        <div class="card-body container">
+          <div class="row">
+            <div src="" class="col-md-2">
+              <%= image_tag("placeholder.png", size: '100x100') %>
+            </div>
+            <div class="col-md-10">
+              <div>
+                We know, it's feels good to stand under the hot water in the shower for a few extra minutes after
+                we're clean. However, showering for a minute less everyday for a month can save up to 150
+                gallons of water! Limit your showers to 5 minutes or less.
+              </div>
+              <!-- <div class="learn-more">
+                <p class="learn-more-header">Learn more</p>
+                <ul>
+                  <li>
+                    <a href=""></a>
+                  </li>
+                </ul>
+              </div> -->
+
+              <div class="challenge-duration">
+                <p class="learn-more-header">How long do you want to take the challenge for?</p>
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-3">
+                      <input type="text" class="form-control" placeholder="3">
+                    </div>
+                    <div class="form-group col-md-3">
+                      <select class="form-control" id="inputInterval">
+                        <option>Choose interval</option>
+                        <option>day(s)</option>
+                        <option>week(s)</option>
+                        <option>month(s)</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <div class="get-started-btn">
+                GET STARTED ON THIS CHALLENGE!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

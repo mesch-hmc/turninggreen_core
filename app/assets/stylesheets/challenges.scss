@@ -102,8 +102,9 @@ select.form-control {
   margin: 25px 0 0 0;
 }
 
-.learn-more-text {
+.learn-more-text, .learn-more-text:hover, .learn-more-text:focus, .learn-more-text:active {
   color: #90B582;
+  text-decoration: none;
 }
 
 .get-started-btn {

@@ -1,0 +1,267 @@
+<div class="challenges-summary">
+  <%= image_tag("waste.jpeg", class: 'challenges-header-img') %>
+  <div class="image-overlay"></div>
+  <div class="challenges-desc">
+    <h1>FOOD</h1>
+    <p>
+      Food is powerful, but not all foods are created equal. Some foods are highly processed and laden
+      with preservatives, pesticides, and sugars, while others are fresh, local, organic, seasonal,
+      non-GMO (FLOSN for short). It is the daily food choices that we make that reinforce the current
+      culture of food production and consumption in our world.
+    </p>
+  </div>
+</div>
+
+<div class="all-challenges">
+  <div class="challenges-header">CHALLENGES</div>
+  <div class="accordion" id="challenge-accordion">
+
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="accordion-toggle btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            SHOP AT A FARMERS' MARKET
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#challenge-accordion">
+        <div class="card-body container">
+          <div class="row">
+            <div src="" class="col-md-2">
+              <%= image_tag("placeholder.png", size: '100x100') %>
+            </div>
+            <div class="card-body-text col-md-10">
+              <div>
+                Spend a morning at a farmers' market. These markets don't have to be a simply a food
+                shopping trip. Take the time to speak to the farmers who grow the produce that you eat.
+                Try the different samples available. Bring friends and family with you on this trip.
+                These markets are special and differ from typical grocery stores in that they're community
+                events. It's an opportunity to connect with the people who grow the food you eat and learn
+                about how and where your food is grown.
+              </div>
+
+              <!-- <div class="learn-more">
+                <p class="learn-more-header">Learn more</p>
+                <span class="learn-more-text">Takeout creates a lot of trash. It doesn't have to: </span>
+                <span><a href="https://www.youtube.com/watch?v=5qx2WFpNTPs">https://www.youtube.com/watch?v=5qx2WFpNTPs</a></span>
+              </div> -->
+
+              <div class="challenge-duration">
+                <p class="learn-more-header">How long do you want to take the challenge for?</p>
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-3">
+                      <input type="text" class="form-control" placeholder="3">
+                    </div>
+                    <div class="form-group col-md-3">
+                      <select class="form-control" id="inputInterval">
+                        <option>Choose interval</option>
+                        <option>day(s)</option>
+                        <option>week(s)</option>
+                        <option>month(s)</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <button class="get-started-btn">
+                GET STARTED ON THIS CHALLENGE!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="accordion-toggle btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            COOK A MEAL COMPOSED OF ALL FLOSN INGREDIENTS FOR UNDER $10
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#challenge-accordion">
+        <div class="card-body container">
+          <div class="row">
+            <div src="" class="col-md-2">
+              <%= image_tag("placeholder.png", size: '100x100') %>
+            </div>
+            <div class="col-md-10">
+              <div>
+                You might think that eating FLOSN (fresh, local, organic, seasonal, non-GMO) food is too
+                expensive. But if you plan ahead, that might not be the case. For example, buying seasonally,
+                in bulk, and from local organic farmers, are all great options to cut back on your costs
+                while reducing your ecological footprint. And not to mention, making these choices are better
+                for your health. Unprocessed foods are nutrient dense and filled with vitamins and minerals
+                that your body needs. Buy a week's worth of groceries, but cost break it down so you know
+                how much the meal you make cost.
+              </div>
+              <div class="learn-more">
+                <p class="learn-more-header">Learn more</p>
+                <ul>
+                  <li>
+                    <a class="learn-more-text" href="https://teensturninggreenblog.wordpress.com/2015/01/14/conscious-grocery-shopping-on-a-college-budget/">College Budget</a>
+                  </li>
+                  <li>
+                    <a class="learn-more-text" href="https://www.centerforfoodsafety.org/healthy-home/3274/cfs-healthy-home/tips-for-a-healthy-home/4189/7-food-resolutions-for-the-new-year">Food Resolutions</a>
+                  </li>
+                  <li>
+                    <a class="learn-more-text" href="https://www.ewg.org/foodnews/#.Wda291d4bFI">Pesticide Guide</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="challenge-duration">
+                <p class="learn-more-header">How long do you want to take the challenge for?</p>
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-3">
+                      <input type="text" class="form-control" placeholder="3">
+                    </div>
+                    <div class="form-group col-md-3">
+                      <select class="form-control" id="inputInterval">
+                        <option>Choose interval</option>
+                        <option>day(s)</option>
+                        <option>week(s)</option>
+                        <option>month(s)</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <div class="get-started-btn">
+                GET STARTED ON THIS CHALLENGE!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <button class="accordion-toggle btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+            MAKE YOUR OWN SNACK
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#challenge-accordion">
+        <div class="card-body container">
+          <div class="row">
+            <div src="" class="col-md-2">
+              <%= image_tag("placeholder.png", size: '100x100') %>
+            </div>
+            <div class="col-md-10">
+              <div>
+                Yes, pre-packaged snacks are convenient. But they create extra unnecessary plastic waste.
+                And more likely than not, additives that aren't good to your health are added for preservation.
+                Skip the package, and opt for making your own. You'll know precisely what the ingredients and
+                see how much money you can save.
+              </div>
+              <div class="learn-more">
+                <p class="learn-more-header">Learn more</p>
+                <ul>
+                  <li>
+                    <a class="learn-more-text" href="https://www.100daysofrealfood.com/85-snacks-for-kids-and-adults/">Here are some ideas</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="challenge-duration">
+                <p class="learn-more-header">How long do you want to take the challenge for?</p>
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-3">
+                      <input type="text" class="form-control" placeholder="3">
+                    </div>
+                    <div class="form-group col-md-3">
+                      <select class="form-control" id="inputInterval">
+                        <option>Choose interval</option>
+                        <option>day(s)</option>
+                        <option>week(s)</option>
+                        <option>month(s)</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <div class="get-started-btn">
+                GET STARTED ON THIS CHALLENGE!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingFour">
+        <h5 class="mb-0">
+          <button class="accordion-toggle btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+            MAKE A BETTER BURGER
+          </button>
+        </h5>
+      </div>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#challenge-accordion">
+        <div class="card-body container">
+          <div class="row">
+            <div class="col-md-2">
+              <%= image_tag("placeholder.png", size: '100x100') %>
+            </div>
+
+            <div class="col-md-10">
+              <div>
+                Americans eat at least 20 billion burgers a year. Most of those burgers come from animals
+                raised on polluting factory-farms that are fed a diet of water-intensive GMO corn and soy.
+                Raising vast monocultures of feed uses large amounts of toxic chemicals that pollute our
+                water and our bodies. It also generates major greenhouse gas emissions and destroys biodiversity
+                that support pollinators and other living creatures. Your challenge is to transform the burger
+                into a tool for a better food system by advocating for a better burger. Better for you,
+                the environment, farmers and animals. Make a burger (meat or plant-based) with only FLOSN ingredients.
+              </div>
+
+              <div class="learn-more">
+                <p class="learn-more-header">Learn more</p>
+                <ul>
+                  <li>
+                    <a class="learn-more-text" href="http://www.betterburgers.org">Resource</a>
+                  </li>
+                </ul>
+                </div>
+
+
+              <div class="challenge-duration">
+                <p class="learn-more-header">How long do you want to take the challenge for?</p>
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-3">
+                      <input type="text" class="form-control" placeholder="3">
+                    </div>
+                    <div class="form-group col-md-3">
+                      <select class="form-control" id="inputInterval">
+                        <option>Choose interval</option>
+                        <option>day(s)</option>
+                        <option>week(s)</option>
+                        <option>month(s)</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <div class="get-started-btn">
+                GET STARTED ON THIS CHALLENGE!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
